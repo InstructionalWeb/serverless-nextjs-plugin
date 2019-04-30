@@ -45,7 +45,10 @@ class NextPage {
     switch (this.pageName) {
       case "index":
         return "/";
-      case "_error":
+      // Route everything to wp-page and handle errors there
+      // case "_error":
+      //   return "/{proxy+}";
+      case "wp-page":
         return "/{proxy+}";
       default:
         // handle pages at any subdir level
